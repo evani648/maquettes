@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Combien coûte votre piscine ? – Tolosa Piscine</title>
+<title>Combien coûtent vos travaux de piscine ? – Tolosa Piscine</title>
 <meta name="description" content="Estimez le prix de votre piscine en 1 minute, puis recevez le devis précis de Tolosa Piscine, pisciniste à Labège.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,8 +129,10 @@ header .btn{padding:10px 15px;font-size:15px}
 footer{background:#082730;color:#9dbcc4;font-size:13.5px;padding:30px 0}
 footer b{color:#fff}
 
-.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#082730;padding:10px 10px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px}
-.barre a{border-radius:14px;display:flex;align-items:center;font-weight:700}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;background:transparent;padding:10px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:8px;pointer-events:none}
+.barre a{border-radius:14px;display:flex;align-items:center;font-weight:700;pointer-events:auto;box-shadow:0 10px 24px -8px rgba(8,39,48,.45)}
+.barre .tel{border:1px solid var(--ligne)}
+.sources{font-size:12px;color:var(--doux);margin-top:10px;text-align:left}
 .barre .estimer{flex:1;justify-content:center;background:var(--eau);color:#fff;padding:14px}
 .barre .tel{background:#fff;color:var(--fonce);padding:0 16px;gap:8px}
 
@@ -147,7 +149,7 @@ footer b{color:#fff}
 </head>
 <body>
 
-<div class="maquette">Démo offerte, préparée pour Tolosa Piscine. Les prix sont des exemples, ils seront remplacés par vos tarifs.</div>
+<div class="maquette">Démo offerte, préparée pour Tolosa Piscine. Les prix sont des moyennes du marché, ils seront remplacés par vos tarifs.</div>
 
 <header>
   <div class="wrap">
@@ -159,10 +161,10 @@ footer b{color:#fff}
 <section class="hero">
   <img src="photo5.jpg" alt="Piscine avec terrasse en bois réalisée par Tolosa Piscine">
   <div class="wrap">
-    <h1>Combien coûte <em>votre piscine</em> ?</h1>
-    <p>Répondez à 5 questions et voyez tout de suite une estimation. Ensuite, Dimitri passe chez vous pour le prix exact, gratuitement.</p>
-    <a class="btn btn-eau" href="#simulateur">Estimer mon projet</a>
-    <div class="badges"><span>★ 4,9 sur 95 avis Google</span><span>Neuf et rénovation</span><span>Toulouse sud-est</span></div>
+    <h1>Combien coûtent <em>vos travaux de piscine</em> ?</h1>
+    <p>Liner, volet, bâche, filtration, eau verte : répondez à 2 questions et voyez tout de suite une estimation. Ensuite, Dimitri vous rappelle pour le prix exact.</p>
+    <a class="btn btn-eau" href="#simulateur">Estimer mes travaux</a>
+    <div class="badges"><span>★ 4,9 sur 95 avis Google</span><span>Rénovation et entretien</span><span>Toulouse et alentours</span></div>
   </div>
 </section>
 
@@ -172,51 +174,23 @@ footer b{color:#fff}
       <div class="boite-haut">
         <b>Estimation de votre projet</b>
         <div class="barre-prog"><i id="prog"></i></div>
-        <small id="etape-txt">Étape 1 sur 5</small>
+        <small id="etape-txt">Étape 1 sur 2</small>
       </div>
       <div class="corps">
 
-        <div class="etape on" data-q="projet">
-          <p class="question">Quel est votre projet ?</p>
-          <p class="aide">Choisissez une réponse.</p>
-          <div class="choix trois">
-            <button class="opt" data-v="neuve"><svg viewBox="0 0 24 24" class="i"><path d="M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M4 14V5a2 2 0 0 1 4 0M12 14V5a2 2 0 0 1 4 0M4 8h8M4 11h8"/></svg><b>Une piscine neuve</b><small>Construction complète</small></button>
-            <button class="opt" data-v="renovation"><svg viewBox="0 0 24 24" class="i"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg><b>Rénover ma piscine</b><small>Liner, filtration, sel…</small></button>
-          </div>
-        </div>
-
-        <div class="etape" data-q="type">
-          <p class="question">Quel type de piscine ?</p>
-          <p class="aide">Pas sûr ? Dimitri vous conseillera lors de sa visite.</p>
-          <div class="choix trois">
-            <button class="opt" data-v="coque"><b>Piscine coque</b><small>Posée en quelques jours, prix plus doux</small></button>
-            <button class="opt" data-v="beton"><b>Piscine maçonnée</b><small>Sur mesure, toutes les formes possibles</small></button>
-          </div>
-        </div>
-
-        <div class="etape" data-q="taille">
-          <p class="question">Quelle taille ?</p>
-          <p class="aide">À peu près, ça suffit.</p>
-          <div class="choix trois">
-            <button class="opt" data-v="S"><b>Petite</b><small>Environ 6 × 3 m</small></button>
-            <button class="opt" data-v="M"><b>Moyenne</b><small>Environ 8 × 4 m, la plus demandée</small></button>
-            <button class="opt" data-v="L"><b>Grande</b><small>Environ 10 × 5 m</small></button>
-          </div>
-        </div>
-
-        <div class="etape" data-q="options" data-multi>
-          <p class="question" id="titre-options">Quelles options ?</p>
-          <p class="aide">Plusieurs choix possibles. Aucune ? Passez à la suite.</p>
+        <div class="etape on" data-q="options" data-multi>
+          <p class="question">De quoi avez-vous besoin ?</p>
+          <p class="aide">Plusieurs choix possibles.</p>
           <div class="choix" id="liste-options"></div>
         </div>
 
-        <div class="etape" data-q="acces">
-          <p class="question">L'accès au jardin ?</p>
-          <p class="aide">Pour savoir si une pelleteuse peut passer facilement.</p>
+        <div class="etape" data-q="taille">
+          <p class="question">Quelle taille fait votre piscine ?</p>
+          <p class="aide">À peu près, ça suffit.</p>
           <div class="choix trois">
-            <button class="opt" data-v="facile"><b>Facile</b><small>Portail large, terrain plat</small></button>
-            <button class="opt" data-v="difficile"><b>Compliqué</b><small>Passage étroit, pente, arbres</small></button>
-            <button class="opt" data-v="nsp"><b>Je ne sais pas</b><small>On regardera ensemble</small></button>
+            <button class="opt" data-v="S"><b>Petite</b><small>Environ 6 × 3 m</small></button>
+            <button class="opt" data-v="M"><b>Moyenne</b><small>Environ 8 × 4 m, la plus courante</small></button>
+            <button class="opt" data-v="L"><b>Grande</b><small>Environ 10 × 5 m</small></button>
           </div>
         </div>
 
@@ -225,11 +199,11 @@ footer b{color:#fff}
           <p class="prix" id="prix">—</p>
           <p class="aide" id="resume"></p>
           <ul class="detail" id="detail"></ul>
-          <p class="note-prix">Prix indicatif, pose comprise. Le prix exact dépend de votre terrain : il est fixé après une visite gratuite.</p>
+          <p class="note-prix">Prix indicatif, pose comprise. Le prix exact dépend de votre piscine : Dimitri le fixe après avoir vu votre bassin.</p>
 
           <div class="formulaire" id="form">
             <h3>Recevez votre devis précis</h3>
-            <p class="aide">Dimitri vous rappelle pour fixer une visite chez vous. Gratuit et sans engagement.</p>
+            <p class="aide">Dimitri vous rappelle pour en parler et vous fait un devis gratuit.</p>
             <div class="champ"><label for="nom">Votre prénom</label><input id="nom" autocomplete="given-name"></div>
             <div class="champ"><label for="tel">Votre téléphone</label><input id="tel" type="tel" autocomplete="tel"></div>
             <div class="champ"><label for="ville">Votre commune</label><input id="ville" placeholder="Ex. : Castanet-Tolosan"></div>
@@ -284,8 +258,8 @@ footer b{color:#fff}
     <h2>Comment ça se passe</h2>
     <p class="intro">Le prix est fixé avant de commencer. Pas de surprise.</p>
     <ul class="trois-pts">
-      <li><svg class="i" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg><div><b>1. Vous estimez</b><p>En une minute, ici, pour savoir si le projet rentre dans votre budget.</p></div></li>
-      <li><svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-6.1 8-12a8 8 0 0 0-16 0c0 5.9 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg><div><b>2. Dimitri vient voir</b><p>Visite gratuite : terrain, accès, envies. Puis un devis clair.</p></div></li>
+      <li><svg class="i" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg><div><b>1. Vous estimez</b><p>En une minute, ici, pour savoir si les travaux rentrent dans votre budget.</p></div></li>
+      <li><svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-6.1 8-12a8 8 0 0 0-16 0c0 5.9 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg><div><b>2. Dimitri vient voir</b><p>Il regarde votre piscine, vous conseille, puis vous fait un devis clair.</p></div></li>
       <li><svg class="i" viewBox="0 0 24 24"><path d="M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg><div><b>3. Vous vous baignez</b><p>Chantier propre, délais tenus, et des conseils pour l'entretien.</p></div></li>
     </ul>
   </div>
@@ -294,63 +268,48 @@ footer b{color:#fff}
 <footer>
   <div class="wrap">
     <b>TOLOSA PISCINE</b><br>74 avenue Louis Couder, 31670 Labège · <a href="tel:+33777915251">07 77 91 52 51</a>
-    <p style="margin-top:12px;font-size:12.5px">Démo réalisée par Evan. Les prix affichés sont des exemples, à remplacer par les tarifs de l'entreprise.</p>
+    <p style="margin-top:12px;font-size:12.5px">Démo réalisée par Evan. Les prix affichés sont des moyennes du marché (guide-piscine.fr, prix-pose.com, abctravaux.org), à remplacer par les tarifs de l'entreprise.</p>
   </div>
 </footer>
 
 <nav class="barre">
-  <a class="estimer" href="#simulateur">Estimer ma piscine</a>
+  <a class="estimer" href="#simulateur">Estimer mes travaux</a>
   <a class="tel" href="tel:+33777915251"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
 </nav>
 
 <script>
-// Tarifs d'exemple [min, max] en euros TTC, pose comprise. À remplacer par ceux du pisciniste.
-const TARIFS = {
-  neuve: {
-    coque: {S:[18000,24000], M:[24000,32000], L:[32000,42000]},
-    beton: {S:[26000,34000], M:[32000,42000], L:[42000,55000]},
-    options: [
-      {id:'plage', nom:'Plage / terrasse autour', sous:'Dallage ou bois', prix:{S:[3500,5500],M:[4500,7000],L:[6000,9000]}},
-      {id:'volet', nom:'Volet roulant', sous:'Sécurité et chaleur', prix:{S:[5500,8000],M:[6500,9500],L:[8000,11500]}},
-      {id:'pac', nom:'Pompe à chaleur', sous:'Baignade d\'avril à octobre', prix:[3000,5000]},
-      {id:'sel', nom:'Traitement au sel', sous:'Moins de chlore', prix:[1500,2500]},
-      {id:'led', nom:'Éclairage LED', sous:'Pour les soirées', prix:[600,1200]},
-      {id:'cascade', nom:'Cascade', sous:'Lame d\'eau décorative', prix:[1500,3000]}
-    ]
-  },
-  renovation: {
-    base: {S:[0,0], M:[0,0], L:[0,0]},
-    options: [
-      {id:'liner', nom:'Nouveau revêtement', sous:'Liner ou membrane armée', prix:{S:[6000,8500],M:[8000,11000],L:[10000,14000]}},
-      {id:'filtration', nom:'Filtration neuve', sous:'Pompe et filtre', prix:[2000,4000]},
-      {id:'sel', nom:'Passage au sel', sous:'Électrolyseur', prix:[1500,2500]},
-      {id:'led', nom:'Spots LED', sous:'Remplacement', prix:[600,1200]},
-      {id:'plage', nom:'Margelles et plage', sous:'Tour de piscine', prix:{S:[3500,5500],M:[4500,7000],L:[6000,9000]}},
-      {id:'pac', nom:'Pompe à chaleur', sous:'Chauffage', prix:[3000,5000]},
-      {id:'volet', nom:'Volet roulant', sous:'Sécurité', prix:{S:[5500,8000],M:[6500,9500],L:[8000,11500]}}
-    ]
-  }
-};
+// Prix moyens du marché, pose comprise (sources : guide-piscine.fr, prix-pose.com, abctravaux.org, 2025-2026).
+// Fourchettes pour une piscine 8 × 4, ajustées pour 6 × 3 et 10 × 5. À remplacer par les tarifs du pisciniste.
+const SERVICES = [
+  {id:'liner', nom:'Changer le liner', sous:'Liner classique, vidange comprise', prix:{S:[1300,2200],M:[1700,2800],L:[2300,3800]}},
+  {id:'membrane', nom:'Membrane armée', sous:'Plus solide qu\'un liner', prix:{S:[2200,3800],M:[2800,4800],L:[3800,6500]}},
+  {id:'volet', nom:'Volet roulant', sous:'Motorisé, norme NF P90-308', prix:{S:[3000,6000],M:[3500,7000],L:[4500,9000]}},
+  {id:'bache', nom:'Bâche à barres', sous:'Couvrir et sécuriser', prix:{S:[800,1600],M:[1000,2200],L:[1400,3000]}},
+  {id:'filtration', nom:'Filtration à refaire', sous:'Pompe, filtre, tuyaux', prix:{S:[1500,3000],M:[1500,3500],L:[2000,4000]}},
+  {id:'verte', nom:'Piscine verte', sous:'Rattrapage de l\'eau', prix:{S:[150,300],M:[150,350],L:[200,450]}},
+  {id:'entretien', nom:'Contrat d\'entretien', sous:'Visites toute l\'année', prix:{S:[1000,2000],M:[1000,2400],L:[1200,2600]}, an:true}
+];
+const TAILLES = {S:'6 × 3', M:'8 × 4', L:'10 × 5'};
 
-const rep = {projet:null,type:null,taille:null,options:[],acces:null};
+const rep = {options:[], taille:null};
 const etapes = [...document.querySelectorAll('.etape')];
-let ordre = ['projet','type','taille','options','acces','fin'];
+const ordre = ['options','taille','fin'];
 let pos = 0;
 const suivant = document.getElementById('suivant'), retour = document.getElementById('retour');
 
 function eur(n){ return n.toLocaleString('fr-FR').replace(/ | /g,' ') + ' €'; }
-function arrondi(n){ return Math.round(n/500)*500; }
-function prixDe(p,t){ return Array.isArray(p) ? p : p[t]; }
+function arrondi(n){ return n<1000 ? Math.round(n/50)*50 : Math.round(n/100)*100; }
 
 function construireOptions(){
   const liste = document.getElementById('liste-options');
-  const opts = TARIFS[rep.projet].options;
-  document.getElementById('titre-options').textContent = rep.projet==='neuve' ? 'Quelles options ?' : 'Que faut-il refaire ?';
-  liste.innerHTML = opts.map(o=>`<button class="opt" data-v="${o.id}" aria-pressed="${rep.options.includes(o.id)}"><b>${o.nom}</b><small>${o.sous}</small></button>`).join('');
+  liste.innerHTML = SERVICES.map(o=>`<button class="opt" data-v="${o.id}" aria-pressed="${rep.options.includes(o.id)}"><b>${o.nom}</b><small>${o.sous}</small></button>`).join('');
   liste.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
     const v=b.dataset.v, on=rep.options.includes(v);
     rep.options = on ? rep.options.filter(x=>x!==v) : [...rep.options,v];
-    b.setAttribute('aria-pressed',!on); maj();
+    if(!on && v==='liner') rep.options = rep.options.filter(x=>x!=='membrane');
+    if(!on && v==='membrane') rep.options = rep.options.filter(x=>x!=='liner');
+    liste.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed', rep.options.includes(x.dataset.v)));
+    maj();
   }));
 }
 
@@ -369,40 +328,29 @@ function afficher(){
 function maj(){
   const q = ordre[pos];
   retour.disabled = pos===0;
-  suivant.disabled = q!=='options' && q!=='fin' && !rep[q];
-  suivant.textContent = q==='acces' ? 'Voir mon estimation' : (q==='options' && rep.options.length===0 ? 'Aucune, continuer' : 'Continuer');
+  suivant.disabled = q==='options' ? rep.options.length===0 : !rep[q];
+  suivant.textContent = q==='taille' ? 'Voir mon estimation' : 'Continuer';
 }
 
-document.querySelectorAll('.etape:not([data-multi]) .opt').forEach(b=>b.addEventListener('click',()=>{
-  const etape=b.closest('.etape'), q=etape.dataset.q;
-  etape.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed','false'));
-  b.setAttribute('aria-pressed','true'); rep[q]=b.dataset.v;
-  if(q==='projet'){ ordre = rep.projet==='neuve' ? ['projet','type','taille','options','acces','fin'] : ['projet','taille','options','fin']; rep.options=[]; }
-  maj();
-  setTimeout(()=>{ if(ordre[pos]===q){ pos++; afficher(); } }, 260);
+document.querySelectorAll('.etape[data-q="taille"] .opt').forEach(b=>b.addEventListener('click',()=>{
+  b.closest('.etape').querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); rep.taille=b.dataset.v; maj();
+  setTimeout(()=>{ if(ordre[pos]==='taille'){ pos++; afficher(); } }, 260);
 }));
 suivant.addEventListener('click',()=>{ pos++; afficher(); });
 retour.addEventListener('click',()=>{ if(pos>0){ pos--; afficher(); } });
 
 function calculer(){
-  const t = rep.taille, lignes = [];
+  const t = rep.taille, choisis = SERVICES.filter(o=>rep.options.includes(o.id));
+  const travaux = choisis.filter(o=>!o.an), annuel = choisis.filter(o=>o.an);
   let min=0, max=0;
-  if(rep.projet==='neuve'){
-    const [a,b] = TARIFS.neuve[rep.type][t];
-    min+=a; max+=b;
-    lignes.push([(rep.type==='coque'?'Piscine coque':'Piscine maçonnée')+' '+({S:'6 × 3',M:'8 × 4',L:'10 × 5'})[t]+', posée', a, b]);
-  }
-  TARIFS[rep.projet].options.filter(o=>rep.options.includes(o.id)).forEach(o=>{
-    const [a,b]=prixDe(o.prix,t); min+=a; max+=b; lignes.push([o.nom,a,b]);
-  });
-  if(rep.acces==='difficile'){ const a=Math.round(min*.08), b=Math.round(max*.12); min+=a; max+=b; lignes.push(['Accès compliqué au terrain',a,b]); }
-  if(lignes.length===0){ lignes.push(['Diagnostic de votre piscine',0,0]); }
-  min=arrondi(min); max=arrondi(max);
+  travaux.forEach(o=>{ min+=o.prix[t][0]; max+=o.prix[t][1]; });
   const el = document.getElementById('prix');
-  if(max===0){ el.innerHTML = 'Sur devis'; }
-  else { animer(el,min,max); }
-  document.getElementById('resume').textContent = rep.projet==='neuve' ? 'Pour une piscine neuve, pose comprise.' : 'Pour la rénovation de votre piscine.';
-  document.getElementById('detail').innerHTML = lignes.map(([n,a,b])=>`<li><span>${n}</span><span>${b?eur(arrondi(a))+' – '+eur(arrondi(b)):'offert'}</span></li>`).join('');
+  if(travaux.length){ animer(el, arrondi(min), arrondi(max)); }
+  else { const [a,b]=annuel[0].prix[t]; el.innerHTML = `${eur(a)} <span>à</span> ${eur(b)}<small style="font-size:18px;color:var(--doux)"> /an</small>`; }
+  document.getElementById('resume').textContent = 'Pour une piscine d\'environ ' + TAILLES[t] + ' m, pose comprise.';
+  document.getElementById('detail').innerHTML = choisis.map(o=>`<li><span>${o.nom}</span><span>${eur(o.prix[t][0])} – ${eur(o.prix[t][1])}${o.an?' /an':''}</span></li>`).join('')
+    + (travaux.length && annuel.length ? `<li><span><b>Total travaux</b> (hors entretien)</span><span><b>${eur(arrondi(min))} – ${eur(arrondi(max))}</b></span></li>` : '');
 }
 
 function animer(el,min,max){
