@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Combien coûtent vos travaux de piscine ? – Piscines et Aménagements</title>
+<meta name="description" content="Estimez le prix de votre piscine en 1 minute, puis recevez le devis précis de Piscines et Aménagements, pisciniste à Marignane.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#f3f8f9; --blanc:#fff; --texte:#11262c; --doux:#5a6d72; --ligne:#dce8eb;
+  --fonce:#0b3440; --eau:#0a9fbd; --eau-fonce:#087f98; --eau-clair:#e3f5f9; --vert:#1f8a5b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--fond);color:var(--texte);line-height:1.55;font-size:16px;padding-bottom:86px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(26px,4.4vw,36px);font-weight:800}
+.intro{color:var(--doux);margin-top:10px;max-width:56ch}
+section{padding:60px 0}
+svg.i{width:22px;height:22px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.maquette{background:var(--fonce);color:#cfe3e8;font-size:12.5px;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:68px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-size:19px;font-weight:800;letter-spacing:.02em}
+.logo span{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--eau);font-weight:700;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:14px;font-weight:700;padding:15px 22px;font-size:16px;transition:transform .15s,background .15s,box-shadow .15s}
+.btn:active{transform:scale(.98)}
+.btn-eau{background:var(--eau);color:#fff;box-shadow:0 8px 20px -10px rgba(10,159,189,.8)}
+.btn-eau:hover{background:var(--eau-fonce)}
+.btn-contour{border:2px solid var(--ligne);background:#fff;color:var(--fonce)}
+header .btn{padding:10px 15px;font-size:15px}
+
+/* hero */
+.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(135deg,#0b3440,#087f98)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,30,38,.35) 0%,rgba(6,30,38,.82) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:70px;padding-bottom:64px}
+.hero h1{font-size:clamp(34px,7vw,58px);font-weight:800;max-width:15ch}
+.hero h1 em{font-style:normal;color:#7fe3f5}
+.hero p{font-size:18px;color:#d9eef3;margin:14px 0 24px;max-width:44ch}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.badges span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:7px 13px;font-size:13.5px;font-weight:600}
+
+/* simulateur */
+.simu{padding-top:0;margin-top:-30px;position:relative;z-index:2}
+.boite{background:#fff;border-radius:24px;box-shadow:0 30px 60px -30px rgba(11,52,64,.45);overflow:hidden;max-width:760px;margin:0 auto}
+.boite-haut{background:var(--fonce);color:#fff;padding:20px 22px}
+.boite-haut b{font-size:19px}
+.barre-prog{height:6px;background:#1d5462;border-radius:9px;margin-top:14px;overflow:hidden}
+.barre-prog i{display:block;height:100%;width:20%;background:var(--eau);border-radius:9px;transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.boite-haut small{display:block;color:#9cc7d1;margin-top:8px;font-size:13px}
+.corps{padding:22px}
+.etape{display:none}.etape.on{display:block;animation:apparait .35s ease both}
+@keyframes apparait{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.question{font-size:20px;font-weight:800;margin-bottom:4px}
+.aide{color:var(--doux);font-size:14.5px;margin-bottom:16px}
+.choix{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choix.trois{grid-template-columns:1fr}
+.opt{border:2px solid var(--ligne);background:#fff;border-radius:16px;padding:16px 14px;text-align:left;display:flex;flex-direction:column;gap:4px;transition:border-color .15s,background .15s,transform .15s}
+.opt:hover{border-color:#9ad9e6;transform:translateY(-2px)}
+.opt b{font-size:15.5px}
+.opt small{color:var(--doux);font-size:13px}
+.opt svg{width:30px;height:30px;color:var(--eau);margin-bottom:6px}
+.opt[aria-pressed=true]{border-color:var(--eau);background:var(--eau-clair)}
+.nav{display:flex;gap:10px;margin-top:18px}
+.nav .btn{flex:1}
+.nav .retour{flex:0 0 auto;background:#fff;border:2px solid var(--ligne);color:var(--doux)}
+.btn[disabled]{opacity:.45;pointer-events:none}
+
+/* résultat */
+.resultat{text-align:center}
+.resultat .petit{color:var(--doux);font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.prix{font-size:clamp(34px,8vw,48px);font-weight:800;color:var(--fonce);letter-spacing:-.02em;margin:6px 0 4px}
+.prix span{color:var(--eau)}
+.detail{list-style:none;text-align:left;border:1px solid var(--ligne);border-radius:16px;margin:18px 0;overflow:hidden}
+.detail li{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;font-size:14.5px;border-top:1px solid var(--ligne)}
+.detail li:first-child{border-top:0}
+.detail li span:last-child{color:var(--doux);white-space:nowrap}
+.note-prix{font-size:13px;color:var(--doux);background:var(--fond);border-radius:12px;padding:12px 14px;text-align:left}
+.formulaire{text-align:left;margin-top:20px;border-top:1px dashed var(--ligne);padding-top:20px}
+.formulaire h3{font-size:19px;margin-bottom:4px}
+.champ{display:grid;gap:6px;margin-top:12px}
+.champ label{font-weight:700;font-size:14px}
+.champ input{font:inherit;border:1.5px solid var(--ligne);border-radius:12px;padding:13px 14px;background:var(--fond)}
+.formulaire .btn{width:100%;margin-top:16px}
+.rassure{display:flex;gap:8px;align-items:center;justify-content:center;color:var(--doux);font-size:13px;margin-top:12px}
+.rassure svg{width:16px;height:16px;color:var(--vert)}
+.merci{display:none;text-align:center;padding:10px 0}
+.merci svg{width:56px;height:56px;color:var(--vert);margin:0 auto 10px}
+
+/* avis */
+.avis .note{display:flex;align-items:center;gap:14px;margin-top:12px}
+.avis .gros{font-size:44px;font-weight:800}
+.etoiles{color:#f2a51a;letter-spacing:2px}
+.carrousel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 18px 26px;margin:0 -18px;scrollbar-width:none}
+.carrousel::-webkit-scrollbar{display:none}
+.carte{scroll-snap-align:start;flex:0 0 min(86%,340px);background:#fff;border:1px solid var(--ligne);border-radius:18px;padding:20px;transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 22px 40px -24px rgba(11,52,64,.45),0 0 0 2px var(--eau)}
+.carte .qui{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700}
+.qui b{display:block;font-size:15px}.qui small{color:var(--doux);font-size:12.5px}
+.carte p{font-size:15px;margin-top:8px}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.galerie img{border-radius:16px;aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.galerie figure{overflow:hidden;border-radius:16px}
+.galerie figure:hover img{transform:scale(1.07)}
+
+/* pourquoi */
+.pourquoi{background:var(--fonce);color:#fff}
+.pourquoi .intro{color:#a9cdd6}
+.trois-pts{list-style:none;display:grid;gap:18px;margin-top:28px}
+.trois-pts li{display:flex;gap:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px}
+.trois-pts svg{color:#7fe3f5}
+.trois-pts b{display:block;font-size:16.5px}
+.trois-pts p{color:#bcd9e0;font-size:14.5px;margin-top:4px}
+
+footer{background:#082730;color:#9dbcc4;font-size:13.5px;padding:30px 0}
+footer b{color:#fff}
+
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;background:transparent;padding:10px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:8px;pointer-events:none}
+.barre a{border-radius:14px;display:flex;align-items:center;font-weight:700;pointer-events:auto;box-shadow:0 10px 24px -8px rgba(8,39,48,.45)}
+.barre .tel{border:1px solid var(--ligne)}
+.sources{font-size:12px;color:var(--doux);margin-top:10px;text-align:left}
+.barre .estimer{flex:1;justify-content:center;background:var(--eau);color:#fff;padding:14px}
+.barre .tel{background:#fff;color:var(--fonce);padding:0 16px;gap:8px}
+
+@media (min-width:760px){
+  body{padding-bottom:0}.barre{display:none}
+  .choix{grid-template-columns:repeat(3,1fr)}
+  .choix.trois{grid-template-columns:repeat(3,1fr)}
+  .galerie{grid-template-columns:repeat(3,1fr)}
+  .trois-pts{grid-template-columns:repeat(3,1fr)}
+  .corps{padding:30px}
+  .hero .wrap{padding-top:110px;padding-bottom:100px}
+}
+:root{--fond:#f5f7fb;--texte:#111827;--doux:#5b6474;--ligne:#e1e6ef;--fonce:#1e293b;--eau:#2563eb;--eau-fonce:#1d4ed8;--eau-clair:#e5edff}
+body{font-family:'Lexend',system-ui,sans-serif}
+.hero{background:linear-gradient(135deg,#1e293b,#1d4ed8)}
+.hero h1 em{color:#93c5fd}
+.trois-pts svg{color:#93c5fd}
+.barre-prog{background:rgba(255,255,255,.18)}
+footer{background:#1e293b;filter:brightness(.82)}
+.opt:hover{border-color:#2563eb}
+</style>
+</head>
+<body>
+
+<div class="maquette">Démo offerte, préparée pour Piscines et Aménagements. Les prix sont des moyennes du marché, ils seront remplacés par vos tarifs.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><b>PISCINES ET AMÉNAGEMENTS</b><span>Pisciniste à Marignane</span></a>
+    <a class="btn btn-eau" href="tel:+33616287077"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Combien coûtent <em>vos travaux de piscine</em> ?</h1>
+    <p>Liner, volet, bâche, filtration, eau verte : répondez à 2 questions et voyez tout de suite une estimation. Ensuite, on vous rappelle pour le prix exact.</p>
+    <a class="btn btn-eau" href="#simulateur">Lancer l'estimation</a>
+    <div class="badges"><span>Rénovation et entretien</span><span>Pays d&#x27;Aix</span><span>Devis gratuit</span></div>
+  </div>
+</section>
+
+<section class="simu" id="simulateur">
+  <div class="wrap">
+    <div class="boite">
+      <div class="boite-haut">
+        <b>Estimation de votre projet</b>
+        <div class="barre-prog"><i id="prog"></i></div>
+        <small id="etape-txt">Étape 1 sur 2</small>
+      </div>
+      <div class="corps">
+
+        <div class="etape on" data-q="options" data-multi>
+          <p class="question">De quoi avez-vous besoin ?</p>
+          <p class="aide">Plusieurs choix possibles.</p>
+          <div class="choix" id="liste-options"></div>
+        </div>
+
+        <div class="etape" data-q="taille">
+          <p class="question">Quelle taille fait votre piscine ?</p>
+          <p class="aide">À peu près, ça suffit.</p>
+          <div class="choix trois">
+            <button class="opt" data-v="S"><b>Petite</b><small>Environ 6 × 3 m</small></button>
+            <button class="opt" data-v="M"><b>Moyenne</b><small>Environ 8 × 4 m, la plus courante</small></button>
+            <button class="opt" data-v="L"><b>Grande</b><small>Environ 10 × 5 m</small></button>
+          </div>
+        </div>
+
+        <div class="etape resultat" data-q="fin">
+          <p class="petit">Votre estimation</p>
+          <p class="prix" id="prix">—</p>
+          <p class="aide" id="resume"></p>
+          <ul class="detail" id="detail"></ul>
+          <p class="note-prix">Prix indicatif, pose comprise. Le prix exact dépend de votre piscine : le pisciniste le fixe après avoir vu votre bassin.</p>
+
+          <div class="formulaire" id="form">
+            <h3>Recevez votre devis précis</h3>
+            <p class="aide">on vous rappelle pour en parler et vous fait un devis gratuit.</p>
+            <div class="champ"><label for="nom">Votre prénom</label><input id="nom" autocomplete="given-name"></div>
+            <div class="champ"><label for="tel">Votre téléphone</label><input id="tel" type="tel" autocomplete="tel"></div>
+            <div class="champ"><label for="ville">Votre commune</label><input id="ville" placeholder="Ex. : Meyreuil"></div>
+            <button class="btn btn-eau" id="envoyer">Être rappelé</button>
+            <p class="rassure"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>Vos réponses sont jointes à la demande</p>
+          </div>
+          <div class="merci" id="merci">
+            <svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+            <h3>C'est envoyé</h3>
+            <p class="aide" style="margin-top:6px">Dans la vraie version, l'entreprise reçoit tout de suite un SMS avec le nom, le numéro, le projet et l'estimation.</p>
+          </div>
+        </div>
+
+        <div class="nav" id="nav">
+          <button class="btn retour" id="retour" disabled aria-label="Retour">←</button>
+          <button class="btn btn-eau" id="suivant" disabled>Continuer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="pourquoi">
+  <div class="wrap">
+    <h2>Comment ça se passe</h2>
+    <p class="intro">Le prix est fixé avant de commencer. Pas de surprise.</p>
+    <ul class="trois-pts">
+      <li><svg class="i" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg><div><b>1. Vous estimez</b><p>En une minute, ici, pour savoir si les travaux rentrent dans votre budget.</p></div></li>
+      <li><svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-6.1 8-12a8 8 0 0 0-16 0c0 5.9 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg><div><b>2. L'équipe vient voir</b><p>Il regarde votre piscine, vous conseille, puis vous fait un devis clair.</p></div></li>
+      <li><svg class="i" viewBox="0 0 24 24"><path d="M2 18c2 0 2-1.5 4-1.5S8 18 10 18s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg><div><b>3. Vous vous baignez</b><p>Chantier propre, délais tenus, et des conseils pour l'entretien.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>PISCINES ET AMÉNAGEMENTS</b><br>Marignane · <a href="tel:+33616287077">06 16 28 70 77</a>
+    <p style="margin-top:12px;font-size:12.5px">Démo réalisée par Evan. Les prix affichés sont des moyennes du marché (guide-piscine.fr, prix-pose.com, abctravaux.org), à remplacer par les tarifs de l'entreprise.</p>
+  </div>
+</footer>
+
+<nav class="barre">
+  <a class="estimer" href="#simulateur">Lancer l'estimation</a>
+  <a class="tel" href="tel:+33616287077"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+</nav>
+
+<script>
+// Prix moyens du marché, pose comprise (sources : guide-piscine.fr, prix-pose.com, abctravaux.org, 2025-2026).
+// Fourchettes pour une piscine 8 × 4, ajustées pour 6 × 3 et 10 × 5. À remplacer par les tarifs du pisciniste.
+const SERVICES = [
+  {id:'liner', nom:'Changer le liner', sous:'Liner classique, vidange comprise', prix:{S:[1300,2200],M:[1700,2800],L:[2300,3800]}},
+  {id:'membrane', nom:'Membrane armée', sous:'Plus solide qu\'un liner', prix:{S:[2200,3800],M:[2800,4800],L:[3800,6500]}},
+  {id:'volet', nom:'Volet roulant', sous:'Motorisé, norme NF P90-308', prix:{S:[3000,6000],M:[3500,7000],L:[4500,9000]}},
+  {id:'bache', nom:'Bâche à barres', sous:'Couvrir et sécuriser', prix:{S:[800,1600],M:[1000,2200],L:[1400,3000]}},
+  {id:'filtration', nom:'Filtration à refaire', sous:'Pompe, filtre, tuyaux', prix:{S:[1500,3000],M:[1500,3500],L:[2000,4000]}},
+  {id:'verte', nom:'Piscine verte', sous:'Rattrapage de l\'eau', prix:{S:[150,300],M:[150,350],L:[200,450]}},
+  {id:'entretien', nom:'Contrat d\'entretien', sous:'Visites toute l\'année', prix:{S:[1000,2000],M:[1000,2400],L:[1200,2600]}, an:true}
+];
+const TAILLES = {S:'6 × 3', M:'8 × 4', L:'10 × 5'};
+
+const rep = {options:[], taille:null};
+const etapes = [...document.querySelectorAll('.etape')];
+const ordre = ['options','taille','fin'];
+let pos = 0;
+const suivant = document.getElementById('suivant'), retour = document.getElementById('retour');
+
+function eur(n){ return n.toLocaleString('fr-FR').replace(/ | /g,' ') + ' €'; }
+function arrondi(n){ return n<1000 ? Math.round(n/50)*50 : Math.round(n/100)*100; }
+
+function construireOptions(){
+  const liste = document.getElementById('liste-options');
+  liste.innerHTML = SERVICES.map(o=>`<button class="opt" data-v="${o.id}" aria-pressed="${rep.options.includes(o.id)}"><b>${o.nom}</b><small>${o.sous}</small></button>`).join('');
+  liste.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
+    const v=b.dataset.v, on=rep.options.includes(v);
+    rep.options = on ? rep.options.filter(x=>x!==v) : [...rep.options,v];
+    if(!on && v==='liner') rep.options = rep.options.filter(x=>x!=='membrane');
+    if(!on && v==='membrane') rep.options = rep.options.filter(x=>x!=='liner');
+    liste.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed', rep.options.includes(x.dataset.v)));
+    maj();
+  }));
+}
+
+function afficher(){
+  const q = ordre[pos];
+  etapes.forEach(e=>e.classList.toggle('on', e.dataset.q===q));
+  const total = ordre.length-1;
+  document.getElementById('prog').style.width = (q==='fin'?100:((pos+1)/total*100))+'%';
+  document.getElementById('etape-txt').textContent = q==='fin' ? 'Terminé' : `Étape ${pos+1} sur ${total}`;
+  document.getElementById('nav').style.display = q==='fin' ? 'none' : 'flex';
+  if(q==='options') construireOptions();
+  if(q==='fin') calculer();
+  maj();
+}
+
+function maj(){
+  const q = ordre[pos];
+  retour.disabled = pos===0;
+  suivant.disabled = q==='options' ? rep.options.length===0 : !rep[q];
+  suivant.textContent = q==='taille' ? 'Voir mon estimation' : 'Continuer';
+}
+
+document.querySelectorAll('.etape[data-q="taille"] .opt').forEach(b=>b.addEventListener('click',()=>{
+  b.closest('.etape').querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true'); rep.taille=b.dataset.v; maj();
+  setTimeout(()=>{ if(ordre[pos]==='taille'){ pos++; afficher(); } }, 260);
+}));
+suivant.addEventListener('click',()=>{ pos++; afficher(); });
+retour.addEventListener('click',()=>{ if(pos>0){ pos--; afficher(); } });
+
+function calculer(){
+  const t = rep.taille, choisis = SERVICES.filter(o=>rep.options.includes(o.id));
+  const travaux = choisis.filter(o=>!o.an), annuel = choisis.filter(o=>o.an);
+  let min=0, max=0;
+  travaux.forEach(o=>{ min+=o.prix[t][0]; max+=o.prix[t][1]; });
+  const el = document.getElementById('prix');
+  if(travaux.length){ animer(el, arrondi(min), arrondi(max)); }
+  else { const [a,b]=annuel[0].prix[t]; el.innerHTML = `${eur(a)} <span>à</span> ${eur(b)}<small style="font-size:18px;color:var(--doux)"> /an</small>`; }
+  document.getElementById('resume').textContent = 'Pour une piscine d\'environ ' + TAILLES[t] + ' m, pose comprise.';
+  document.getElementById('detail').innerHTML = choisis.map(o=>`<li><span>${o.nom}</span><span>${eur(o.prix[t][0])} – ${eur(o.prix[t][1])}${o.an?' /an':''}</span></li>`).join('')
+    + (travaux.length && annuel.length ? `<li><span><b>Total travaux</b> (hors entretien)</span><span><b>${eur(arrondi(min))} – ${eur(arrondi(max))}</b></span></li>` : '');
+}
+
+function animer(el,min,max){
+  const final = `${eur(min)} <span>à</span> ${eur(max)}`, d=900, t0=performance.now();
+  el.innerHTML = final;
+  (function pas(t){ const k=Math.min(1,Math.max(0,(t-t0)/d)), e=1-Math.pow(1-k,3);
+    el.innerHTML = k<1 ? `${eur(arrondi(min*e))} <span>à</span> ${eur(arrondi(max*e))}` : final;
+    if(k<1) requestAnimationFrame(pas); })(t0);
+  setTimeout(()=>{ el.innerHTML = final; }, d+200);
+}
+
+document.getElementById('envoyer').addEventListener('click',()=>{
+  document.getElementById('form').style.display='none';
+  document.getElementById('merci').style.display='block';
+});
+
+afficher();
+</script>
+</body>
+</html>
